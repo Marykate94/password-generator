@@ -11,8 +11,17 @@ function generatePassword() {
 generatePassword();
 
 function selectCriteria() {
-  var upperCase = window.prompt("Please enter upper case letters")
+  var upperCase = window.prompt("Please enter upper case letters");
   console.log(upperCase);
+
+  var lowerCase = window.prompt("Please enter lower case letters");
+  console.log(lowerCase);
+
+  var numericValues = window.prompt("Please enter numbers between 0 and 9");
+  console.log(numericValues);
+
+  var specialChar = window.prompt("Please enter special characters: ! @ # $ % & * ?");
+  console.log(specialChar);
 }
 
 selectCriteria();
