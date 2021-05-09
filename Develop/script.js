@@ -50,7 +50,6 @@ function getUserChoices() {
    var passChar = "";
    var guarChar = "";
 
-   generatePassword()
   }
 
 
