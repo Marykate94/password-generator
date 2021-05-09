@@ -9,14 +9,14 @@ var numeric = ["1234567890"];
 var password = "";
 
 
-function getUserChoices(); {
+function getUserChoices() {
+
  charThreshold = prompt("How many characters would you like your password to contain?");
 
  if (charThreshold <= 7 || charThreshold >= 129) {
   alert("Password length must be between 8-128 characters Try again");
   charThreshold = parseInt(charThreshold);
   return charThreshold();
-
  }
  lowerCaseSelect = confirm("Would you like to use lowercase letters?");
  if (lowerCaseSelect) {
@@ -37,19 +37,21 @@ function getUserChoices(); {
  if (!numericSelect && !specialCharSelect && !upperCaseSelect && !lowerCaseSelect); {
   alert('You must select "confirm" from at least one of the following prompts');
  }
+ console.log(getUserChoices);
  getUserChoices();
+
 };
 
- function generatePassword(); {
-   for (var i = 0; i < passwordLength; i++) {
-    password += validCharacters.charAt(Math.floor(Math.random() * validCharacters.length));
-  }
-  var results = "";
-  var passChar = "";
-  var guarChar = "";
+  function generatePassword() {
+    for (var i = 0; i < passwordLength; i++) {
+     password += validCharacters.charAt(Math.floor(Math.random() * validCharacters.length));
+   }
+   var results = "";
+   var passChar = "";
+   var guarChar = "";
 
-  generatePassword();
- }
+   generatePassword();
+  }
 
 
 // Get references to the #generate element
@@ -61,6 +63,7 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
   
     passwordText.value = password;
+
   }
   
   generateBtn.addEventListener("click", writePassword);
