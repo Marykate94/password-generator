@@ -77,7 +77,7 @@ getUserChoices();
     // = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz","±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠","0123456789"];
 
     for (var i = 0; i < charThreshold; i++) {
-      password += validCharArr.charAt(Math.floor(Math.random() * validCharArr.length));
+      password += (Math.floor(Math.random() * validCharArr.length));
     }
    };
 
