@@ -38,9 +38,9 @@ function getUserChoices() {
   alert('You must select "confirm" from at least one of the following prompts');
  }
  console.log(getUserChoices);
- getUserChoices();
 
 };
+getUserChoices();
 
   function generatePassword() {
     for (var i = 0; i < charThreshold; i++) {
