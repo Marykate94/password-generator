@@ -43,14 +43,14 @@ function getUserChoices() {
 };
 
   function generatePassword() {
-    for (var i = 0; i < passwordLength; i++) {
-     password += validCharacters.charAt(Math.floor(Math.random() * validCharacters.length));
+    for (var i = 0; i < charThreshold; i++) {
+     password += passwordText.charAt(Math.floor(Math.random() * passwordText.length));
    }
    var results = "";
    var passChar = "";
    var guarChar = "";
 
-   generatePassword();
+   generatePassword()
   }
 
 
