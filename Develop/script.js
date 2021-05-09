@@ -64,7 +64,7 @@ getUserChoices();
   function generatePassword() {
     console.log(charThreshold);
     for (var i = 0; i < charThreshold; i++) {
-     password += (Math.floor(Math.random() * charThreshold.length));
+     password += charThreshold.charAt(Math.floor(Math.random() * charThreshold.length));
      return password;
      // this needs to be fixed - not currently working
      console.log(password);
