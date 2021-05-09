@@ -53,14 +53,11 @@ function getUserChoices() {
   console.log(password);
  }
  //console log showed this is working
+  if (!numericSelect && !specialCharSelect && !upperCaseSelect && !lowerCaseSelect); {
+    
+    }
+  };
 
-//  if(!numericSelect && !specialCharSelect && !upperCaseSelect && !lowerCaseSelect); {
-//   alert('You must select "confirm" from at least one of the following prompts');
-//  } // this is not generating correctly
-
- 
-
-};
 getUserChoices();
 
   function generatePassword() {
