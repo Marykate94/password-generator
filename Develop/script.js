@@ -63,22 +63,15 @@ function getUserChoices() {
 };
 getUserChoices();
 
-  function validCharArr() {
-    var validCharArr = []; 
-  validCharArr[0] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  validCharArr[1] = "abcdefghijklmnopqrstuvwxyz";
-  validCharArr[2] = "±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠";
-  validCharArr[3] ="0123456789";
-  }
-
   function generatePassword() {
-
-    
-    // = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz","±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠","0123456789"];
+    let myPassword= "";
 
     for (var i = 0; i < charThreshold; i++) {
-      password += (Math.floor(Math.random() * validCharArr.length));
+      myPassword += password[Math.floor(Math.random() * password.length)];
     }
+    console.log(myPassword);
+
+    return myPassword;
    };
 
 
