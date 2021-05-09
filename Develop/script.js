@@ -7,6 +7,8 @@ var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXZY"];
 var specialChar = ["±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠"];
 var numeric = ["0123456789"];
 var password = "";
+
+
 // var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 // var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 // var specialChar = ["±","!","@","#","$","%","^","&","*","(",")","_","+","-","=","§","£","™","¡","¢","∞","§","¶","•","ª","º","–","≠"];
@@ -61,19 +63,30 @@ function getUserChoices() {
 };
 getUserChoices();
 
-  function generatePassword() {
-    console.log(charThreshold);
-    for (var i = 0; i < charThreshold; i++) {
-     password += charThreshold.charAt(Math.floor(Math.random() * charThreshold.length));
-     return password;
-     // this needs to be fixed - not currently working
-     console.log(password);
-   };
-   var results = "";
-   var passChar = "";
-   var guarChar = "";
-
+  function validCharArr() {
+    var validCharArr = []; 
+  validCharArr[0] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  validCharArr[1] = "abcdefghijklmnopqrstuvwxyz";
+  validCharArr[2] = "±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠";
+  validCharArr[3] ="0123456789";
   }
+
+  function generatePassword() {
+
+    
+    // = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz","±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠","0123456789"];
+
+    for (var i = 0; i < charThreshold; i++) {
+      password += validCharArr.charAt(Math.floor(Math.random() * validCharArr.length));
+    }
+   };
+
+
+   //  var results = "";
+  //  var passChar = "";
+  //  var guarChar = "";
+
+  
   generatePassword();
 
 
