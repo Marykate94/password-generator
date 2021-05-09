@@ -9,10 +9,10 @@ To generate a random password using variables selected by the user.
 *JavaScript
 
 ## Website
-
+https://marykate94.github.io/password-generator/
 
 ## Screenshot
-![ScreenShot of Current Active Webpage 1]
+
 
 # Contribution
 Made by Marykate Smith
