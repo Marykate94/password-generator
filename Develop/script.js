@@ -74,7 +74,7 @@ getUserChoices();
    //  var results = "";
   //  var passChar = "";
   //  var guarChar = "";
-  generatePassword();
+  // generatePassword();
 
 
 // Get references to the #generate element
