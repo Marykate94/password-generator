@@ -12,7 +12,7 @@ To generate a random password using variables selected by the user.
 
 
 ## Screenshot
-
+![ScreenShot of Current Active Webpage 1]
 
 # Contribution
 Made by Marykate Smith
