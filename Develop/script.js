@@ -15,42 +15,57 @@ function getUserChoices() {
 
  if (charThreshold <= 7 || charThreshold >= 129) {
   alert("Password length must be between 8-128 characters Try again");
-  charThreshold = parseInt(charThreshold);
-  return charThreshold();
+  charThreshold = number.parseInt(charThreshold);
+  password += charThreshold
+  // return charThreshold();
+  console.log(charThreshold);
+  // console log shows this is not working
  }
+
+
  lowerCaseSelect = confirm("Would you like to use lowercase letters?");
  if (lowerCaseSelect) {
   password += lowerCase
 }
+// console log showed this is working
+
  upperCaseSelect = confirm("Would you like to use uppercase letters?");
  if (upperCaseSelect) {
   password += upperCase
  }
+ //console log showed this is working
+
  specialCharSelect = confirm("Would you like to use special characters?");
  if (specialCharSelect) {
   password += specialChar
  }
+ // console log showed this is working
+
  numericSelect = confirm("Would you like to use numbers?");
  if (numericSelect) {
   password += numeric
  }
- if (!numericSelect && !specialCharSelect && !upperCaseSelect && !lowerCaseSelect); {
+ //console log showed this is working
+
+ if(!numericSelect && !specialCharSelect && !upperCaseSelect && !lowerCaseSelect); {
   alert('You must select "confirm" from at least one of the following prompts');
- }
- console.log(getUserChoices);
+ } // this is not generating correctly
+
+ 
 
 };
 getUserChoices();
 
   function generatePassword() {
     for (var i = 0; i < charThreshold; i++) {
-     password += passwordText.charAt(Math.floor(Math.random() * passwordText.length));
+     password += (Math.floor(Math.random() * length)); // this needs to be fixed - not currently working
    }
    var results = "";
    var passChar = "";
    var guarChar = "";
 
   }
+  generatePassword();
 
 
 // Get references to the #generate element
