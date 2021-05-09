@@ -2,10 +2,10 @@ console.log("first");
 
 // Variables
 var charThreshold = 0;
-var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
-var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var specialChar = ["±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠"];
-var numeric = ["1234567890"];
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var specialChar = ["±","!","@","#","$","%","^","&","*","(",")","_","+","-","=","§","£","™","¡","¢","∞","§","¶","•","ª","º","–","≠"];
+var numeric = ["1","2","3","4","5","6","7","8","9","0"];
 var password = "";
 
 
@@ -15,8 +15,8 @@ function getUserChoices() {
 
  if (charThreshold <= 7 || charThreshold >= 129) {
   alert("Password length must be between 8-128 characters Try again");
-  charThreshold = number.parseInt(charThreshold);
-  password += charThreshold
+  charThreshold = parseInt(charThreshold);
+  password = charThreshold
   // return charThreshold();
   console.log(charThreshold);
   // console log shows this is not working
@@ -25,25 +25,27 @@ function getUserChoices() {
 
  lowerCaseSelect = confirm("Would you like to use lowercase letters?");
  if (lowerCaseSelect) {
-  password += lowerCase
+  password = password.concat(lowerCase)
 }
 // console log showed this is working
 
  upperCaseSelect = confirm("Would you like to use uppercase letters?");
  if (upperCaseSelect) {
-  password += upperCase
+  password = password.concat (upperCase)
  }
  //console log showed this is working
 
  specialCharSelect = confirm("Would you like to use special characters?");
  if (specialCharSelect) {
-  password += specialChar
+  password = password.concat(specialChar)
+  console.log(password);
  }
  // console log showed this is working
 
  numericSelect = confirm("Would you like to use numbers?");
  if (numericSelect) {
-  password += numeric
+  password = password.concat(numeric)
+  console.log(password);
  }
  //console log showed this is working
 
@@ -57,8 +59,10 @@ function getUserChoices() {
 getUserChoices();
 
   function generatePassword() {
+    console.log(charThreshold);
     for (var i = 0; i < charThreshold; i++) {
-     password += (Math.floor(Math.random() * length)); // this needs to be fixed - not currently working
+     password += (Math.floor(Math.random() * charThreshold.length)); // this needs to be fixed - not currently working
+     console.log(password);
    }
    var results = "";
    var passChar = "";
