@@ -1,56 +1,58 @@
-// Assignment code here
+console.log("first");
 
-// variables 
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  var numericValues = "0123456789";
-  var specialChar = "~!@#$%^&*()_+?";
-  var charThreshold = computeThreshold();
-  var finalPassword = "";
-}
-//intro hello
-
-function generatePassword() {
-  // password threshold 
-  var computeThreshold = prompt("How many characters do you want in your password? Please choose a number between 8 and 128?");
-
-  // uppercase prompt
-  var computeUpperCase = confirm("Do you want uppercase letters?");
-
-  // lower case prompt 
-  var computeLowerCase = confirm("Do you want lower case letters?");
-
-
-  // numeric values prompt
-    numericValues = confirm("Do you want numbers?");
-    console.log(numericValues);
-
-  // special characters
-  var computeSpecialChar = confirm("Do you want special characters?");
-
-  for (var i = 0; i < computeThreshold; ++i) {
-    generatePassword = finalPassword+generatePassword.charAt(Math.floor(Math.random() * size));
- }
- return generatePassword;
-
-};
-
+// Variable Outline
+var charThreshold = 0;
+var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
+var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var specialChar = ["±!@#$%^&*()_+-=§£™¡¢∞§¶•ªº–≠"];
+var numericValue = ["1234567890"];
+var finalPassword = "";
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
+// Character Length Section Begin
+
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  var charThreshold = prompt("How many characters would you like your password to contain?")
   passwordText.value = password;
+  if (charThreshold <= 7 || charThreshold >= 129) {
+    alert("Password length must be between 8-128 characters Try again");
+    passLength = parseInt(charThreshold);
+    return charThreshold();
 
+  }
+  lowerCaseSelect = confirm("Would you like to use lowercase letters?");
+  if (lowerCaseSelect) {
+    finalPassword += lowerCase
+  }
+  upperCaseSelect = confirm("Would you like to use uppercase letters?");
+  if (upperCaseSelect) {
+    finalPassword += upperCase
+  }
+  specialcharselect = confirm("Would you like to use special characters?");
+  if (specialCharSelect) {
+    finalPassword += specialChar
+  }
+  numericSelect = confirm("Would you like to use numbers?");
+  if (numericSelect) {
+    finalPassword += numeric
+  }
+  if(numericSelect = false){
+    alert('You must select "confirm" from at least one of the following prompts');
+    writePassword();
+  }
+  for (var i = 0; i < charThreshold; i++) {
+    finalPassword += passwordText.value.charAt(Math.floor(Math.random() * passwordText.value.length));
+  }
 
 }
 
+
+
+// Character length Section End
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
